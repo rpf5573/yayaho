@@ -1,0 +1,154 @@
+// content animation
+.ultp-animation-slideup {
+    .ultp-block-content {
+        .ultp-block-content-inner {
+            transition: 400ms;
+            transform:translateY(0);
+        }
+    }
+    &:hover {
+        .ultp-block-content {
+            .ultp-block-content-inner {
+                transform:translateY(-10px);
+            }
+        }
+    }
+}
+.ultp-animation-slidedown {
+    .ultp-block-content {
+        .ultp-block-content-inner {
+            transition: 400ms;
+            transform:translateY(0);
+        }
+    }
+    &:hover {
+        .ultp-block-content {
+            .ultp-block-content-inner {
+                transform:translateY(10px);
+            }
+        }
+    }
+}
+
+.wp-block-ultimate-post-post-grid-5 {
+    .ultp-block-row {
+        grid-template-columns: 50% 1fr 1fr;
+        &.ultp-layout1 {
+            .ultp-block-item {
+                &:first-child {
+                    grid-column-start: 1;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    height: 100%;
+                    .ultp-block-content-overlay {
+                        height: 100%;
+                    }
+                }
+                &:nth-child(2) {
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                    grid-row: 1;
+                }
+            }
+        }
+        &.ultp-layout2 {
+            .ultp-block-item {
+                &:first-child {
+                    grid-column-start: 1;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    .ultp-block-content-overlay {
+                        height: 100%;
+                    }
+                }
+                &:nth-child(2) {
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                    grid-row: 2;
+                }
+            }
+        }
+        &.ultp-block-content-true.ultp-layout1 {
+            grid-template-columns: 1fr 1fr 50%;
+            .ultp-block-item {
+                &:first-child {
+                    grid-column-start: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+                &:nth-child(2) {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row: 1;
+                }
+            }
+        }
+        &.ultp-block-content-true.ultp-layout2 {
+            grid-template-columns: 1fr 1fr 50%;
+            .ultp-block-item {
+                &:first-child {
+                    grid-column-start: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+                &:nth-child(2) {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row: 2;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .wp-block-ultimate-post-post-grid-5 {
+        .ultp-block-row {
+            &.ultp-layout1,
+            &.ultp-layout2,
+            &.ultp-block-content-true.ultp-layout1,
+            &.ultp-block-content-true.ultp-layout2 {
+                grid-template-columns: 1fr 1fr;
+                .ultp-block-item {
+                    &:first-child {
+                        height: 100%;
+                        min-height: 100% !important;
+                        grid-column-start: initial;
+                        grid-row-start: initial;
+                        grid-row-end: initial;
+                    }
+                    &:nth-child(2) {
+                        grid-column-start: initial;
+                        grid-column-end: initial;
+                        grid-row: initial;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wp-block-ultimate-post-post-grid-5 {
+        .ultp-block-row {
+            &.ultp-layout1,
+            &.ultp-layout2,
+            &.ultp-block-content-true.ultp-layout1,
+            &.ultp-block-content-true.ultp-layout2 {
+                grid-template-columns: 1fr;
+                .ultp-block-item {
+                    &:first-child {
+                        grid-column-start: initial;
+                        grid-row-start: initial;
+                        grid-row-end: initial;
+                    }
+                    &:nth-child(2) {
+                        grid-column-start: initial;
+                        grid-column-end: initial;
+                        grid-row: initial;
+                    }
+                }
+            }
+        }
+    }
+}

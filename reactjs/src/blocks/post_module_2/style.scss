@@ -1,0 +1,172 @@
+.ultp-block-post-module2 {
+    margin: 0 -15px;
+    clear: both;
+    display: inline-block;
+    .ultp-big-post-module2,
+    .ultp-small-post-module2 {
+        width: 50%;
+        float: left;
+        padding: 0 15px;
+
+    } 
+    &.ultp-block-content-true {
+        .ultp-big-post-module2,
+        .ultp-small-post-module2 {
+            float: right;
+        }
+    }
+    &.ultp-layout2 {
+        .ultp-small-post-module2 {
+            .ultp-block-item {
+                .ultp-block-content-wrap {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}
+
+.ultp-big-post-module2 {
+    .ultp-block-content-wrap {
+        position: relative;
+        .ultp-block-image {
+            position: relative;
+            > a {
+                &:after {
+                    content: '';
+                    background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.7)),color-stop(60%,rgba(0,0,0,0)),to(rgba(0,0,0,0)));
+                    background: linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,0) 60%,rgba(0,0,0,0));
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-transition: background-color .3s ease;
+                    transition: background-color .3s ease;
+                }
+            }
+        }
+        .ultp-block-content {
+            position: absolute;
+            bottom: 0;
+            padding: 25px;
+            .ultp-block-title a,
+            .ultp-block-title a:hover,
+            .ultp-block-excerpt,
+            .ultp-block-meta span,
+            .ultp-block-meta span a,
+            .ultp-block-meta span a:hover,
+            .ultp-block-readmore a,
+            .ultp-block-readmore a:hover,
+            .ultp-block-meta span:after {
+                color: #fff;
+            }
+            .ultp-block-meta-dot span:after {
+                background: #fff;
+            }
+            .ultp-block-readmore a svg,
+            .ultp-block-readmore a:hover svg,
+            .ultp-block-meta span svg {
+                fill: #fff;
+            }
+        }
+    }
+    
+}
+
+.ultp-small-post-module2 {
+    .ultp-block-item {
+        .ultp-block-content-wrap {
+            display: flex !important;
+            position: relative;
+        }
+    }
+}
+.ultp-layout1{
+    .ultp-small-post-module2 {
+        .ultp-block-item {
+            .ultp-block-image {
+                margin-right: 0 !important;
+                margin-left: 0!important;
+            }
+        }
+    }      
+}
+.wp-block-ultimate-post-post-module-2 {
+    counter-reset: post-list2-counter;
+    .ultp-layout4 {
+        .ultp-small-post-module2 {
+            .ultp-block-content {
+                position: relative;
+                &::before {
+                    counter-increment: post-list2-counter;
+                    content: counter(post-list2-counter, decimal);
+                    position: absolute;
+                    font-size: 18px;
+                    text-align: center;
+                    left: 0;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    font-style: italic;
+                    background: #eee;
+                    padding: 10px;
+                    border-radius: 100%;
+                    box-sizing: content-box;
+                    -webkit-transition: all .3s;
+                    -o-transition: all .3s;
+                    transition: all .3s;
+                }
+            }
+        
+            .ultp-block-item {
+                .ultp-block-image {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                .ultp-block-content {
+                    padding-left: 60px;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .ultp-layout5 {
+        .ultp-small-post-module2 {
+            .ultp-block-item {
+                position: relative;
+                &::before {
+                    counter-increment: post-list2-counter;
+                    content: counter(post-list2-counter, decimal);
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    position: absolute;
+                    z-index: 2;
+                    top: 10px;
+                    left: -15px;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 31px;
+                    border: 2px solid #ffffff;
+                    background: #000;
+                    color: #fff;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .ultp-block-post-module2 .ultp-big-post-module2, 
+    .ultp-block-post-module2 .ultp-small-post-module2 {
+        width: 100%;
+    }
+    .ultp-block-post-module2 .ultp-big-post-module2 {
+        margin-bottom: 30px;
+    }
+}

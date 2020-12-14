@@ -1,0 +1,182 @@
+//media
+.ultp-block-media {
+    display: flex;
+    .ultp-block-image {
+        overflow: hidden;
+        position: relative;
+    }
+    .ultp-block-content {
+        flex: 1;
+    }
+}
+
+//block 4 special
+.wp-block-ultimate-post-post-list-4 {
+    .ultp-block-item {
+        .ultp-block-content {
+            display: block;
+        }
+        &:not(:first-child) {
+            .ultp-block-title {
+                font-size: 16px;
+                line-height: 1;
+            }
+        }
+        &:first-child {
+            .ultp-block-content-wrap {
+                display: block;
+            }
+            margin-bottom: 40px;
+            .ultp-block-title {
+                font-size: 22px;
+                line-height: 1;
+            }
+            .ultp-block-image {
+                img {
+                    max-width: 100%;
+                }
+            }
+            .ultp-block-content {
+                flex: auto;
+                margin-left: 0;
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            border-bottom: none !important;
+        }
+    }
+}
+
+//post list 2 layouts
+.wp-block-ultimate-post-post-list-4 {
+    .ultp-block-wrapper {
+        counter-reset: post-list2-counter2;
+    }
+        .ultp-first-postlist-2 {
+            position: relative;
+            line-height: 0;
+            .ultp-block-content {
+                position: absolute;
+                bottom: 0;
+                padding: 25px;
+                .ultp-block-title a,
+                .ultp-block-readmore a,
+                .ultp-block-meta span a,
+                .ultp-block-meta span,
+                .ultp-block-excerpt {
+                    color: #fff;
+                }
+                .ultp-block-title a:hover,
+                .ultp-block-readmore a:hover,
+                .ultp-block-meta span a:hover {
+                    color: rgba(255, 255, 255, 0.90);
+                }
+                .ultp-block-readmore a:hover svg {
+                    fill: rgba(255, 255, 255, 0.90);
+                }
+                .ultp-block-meta span svg {
+                    fill: #fff;
+                }
+            }
+            .ultp-block-image {
+                >a:after {
+                    content: '';
+                    background: -webkit-linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,0) 80%,rgba(0,0,0,0));
+                    background: linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,0) 80%,rgba(0,0,0,0));
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-transition: background-color .3s ease;
+                    transition: background-color .3s ease;
+                }
+            }
+        }
+    .ultp-layout4 {
+        .ultp-block-item {
+            position: relative;
+            &::before {
+                counter-increment: post-list2-counter2;
+                content: counter(post-list2-counter2, decimal);
+                display: block;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                z-index: 2;
+                top: 10px;
+                left: -15px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 31px;
+                border: 2px solid #ffffff;
+                background: #000;
+                color: #fff;
+                border-radius: 100%;
+            }
+        }
+    }
+    .ultp-block-content-true {
+        &.ultp-layout4 {
+            .ultp-block-item {
+                &::before {
+                    left: auto;
+                    right: -15px;
+                }
+            }
+        }
+    }
+
+    // post list 2 (layout 3, layout 4)
+    .ultp-layout2 {
+        .ultp-block-item:not(:first-child) .ultp-block-image {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    // post list 2 (layout 5, layout 6)
+    counter-reset: post-list2-counter;
+    .ultp-layout3 {
+        .ultp-block-item:not(:first-child) {
+            .ultp-block-image {
+                margin-right: 0;
+                margin-left: 0;
+            }
+            .ultp-block-content {
+                padding-left: 60px;
+                position: relative;
+                &::before {
+                    counter-increment: post-list2-counter;
+                    content: ("0" )counter(post-list2-counter, decimal);
+                    position: absolute;
+                    font-size: 18px;
+                    text-align: center;
+                    left: 0;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    font-style: italic;
+                    background: #eee;
+                    padding: 10px;
+                    border-radius: 100%;
+                    box-sizing: content-box;
+                    -webkit-transition: all .3s;
+                    -o-transition: all .3s;
+                    transition: all .3s;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .wp-block-ultimate-post-post-list-4 {
+        .ultp-block-media{
+            display: block;
+        }
+    }
+}
