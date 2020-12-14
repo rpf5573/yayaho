@@ -18,8 +18,8 @@ import Toggle from './fields/Toggle'
 import Typography from './fields/Typography'
 import Separator from './fields/Separator'
 import Template from './fields/Template'
-import {Sections, Section} from './Sections'
-import {CssGenerator} from './CssGenerator'
-import {FieldGenerator} from './FieldGenerator'
+import { Sections, Section } from './Sections'
+import { CssGenerator } from './CssGenerator'
+import { FieldGenerator } from './FieldGenerator'
 
 wp.ultp = { Alignment, Border, BoxShadow, Color, Color2, Divider, Dimension, Gradient, Layout, Link, Media, RadioImage, Range, Select, Tag, Toggle, Typography, Separator, Template, Sections, Section, LinkButton, CssGenerator, FieldGenerator }

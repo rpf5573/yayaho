@@ -1,9 +1,9 @@
-const path = require( 'path' );
+const path = require('path');
 
 module.exports = {
   mode: 'development',
   entry: {
-    './assets/js/editor.blocks.min' : './src/index.js'
+    './assets/js/editor.blocks.min': './src/index.js'
   },
   output: {
     path: path.join(__dirname, '../'),
@@ -14,9 +14,9 @@ module.exports = {
   module: {
     rules: [
       {
-          test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
-          use: { loader: 'babel-loader' }
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: { loader: 'babel-loader' }
       },
     ],
   },
