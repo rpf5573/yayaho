@@ -213,37 +213,11 @@ class Initialization {
   // Require Blocks
   public function blocks() {
     require_once ULTP_PATH . 'blocks/Post_List_1.php';
-    require_once ULTP_PATH . 'blocks/Post_List_2.php';
-    require_once ULTP_PATH . 'blocks/Post_List_3.php';
-    require_once ULTP_PATH . 'blocks/Post_List_4.php';
-    require_once ULTP_PATH . 'blocks/Post_Slider_1.php';
-    require_once ULTP_PATH . 'blocks/Post_Grid_1.php';
-    require_once ULTP_PATH . 'blocks/Post_Grid_2.php';
-    require_once ULTP_PATH . 'blocks/Post_Grid_3.php';
-    require_once ULTP_PATH . 'blocks/Post_Grid_4.php';
-    require_once ULTP_PATH . 'blocks/Post_Grid_5.php';
-    require_once ULTP_PATH . 'blocks/Post_Grid_6.php';
-    require_once ULTP_PATH . 'blocks/Post_Grid_7.php';
     require_once ULTP_PATH . 'blocks/Heading.php';
     require_once ULTP_PATH . 'blocks/Image.php';
-    require_once ULTP_PATH . 'blocks/Post_Module_1.php';
-    require_once ULTP_PATH . 'blocks/Post_Module_2.php';
     $this->all_blocks['ultimate-post_post-list-1'] = new \ULTP\blocks\Post_List_1();
-    $this->all_blocks['ultimate-post_post-list-2'] = new \ULTP\blocks\Post_List_2();
-    $this->all_blocks['ultimate-post_post-list-3'] = new \ULTP\blocks\Post_List_3();
-    $this->all_blocks['ultimate-post_post-list-4'] = new \ULTP\blocks\Post_List_4();
-    $this->all_blocks['ultimate-post_post-slider-1'] = new \ULTP\blocks\Post_Slider_1();
-    $this->all_blocks['ultimate-post_post-grid-1'] = new \ULTP\blocks\Post_Grid_1();
-    $this->all_blocks['ultimate-post_post-grid-2'] = new \ULTP\blocks\Post_Grid_2();
-    $this->all_blocks['ultimate-post_post-grid-3'] = new \ULTP\blocks\Post_Grid_3();
-    $this->all_blocks['ultimate-post_post-grid-4'] = new \ULTP\blocks\Post_Grid_4();
-    $this->all_blocks['ultimate-post_post-grid-5'] = new \ULTP\blocks\Post_Grid_5();
-    $this->all_blocks['ultimate-post_post-grid-6'] = new \ULTP\blocks\Post_Grid_6();
-    $this->all_blocks['ultimate-post_post-grid-7'] = new \ULTP\blocks\Post_Grid_7();
     $this->all_blocks['ultimate-post_heading'] = new \ULTP\blocks\Heading();
     $this->all_blocks['ultimate-post_image'] = new \ULTP\blocks\Image();
-    $this->all_blocks['ultimate-post_post-module-1'] = new \ULTP\blocks\Post_Module_1();
-    $this->all_blocks['ultimate-post_post-module-2'] = new \ULTP\blocks\Post_Module_2();
   }
 
   // Require Categories
